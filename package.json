@@ -1,0 +1,32 @@
+{
+  "name": "tw-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon",
+    "build": "rimraf ./dist && tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js,json}": "prettier package.json --write --single-quote --trailing-comma all --tab-width 2"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "express": "^4.18.2"
+  }
+}
